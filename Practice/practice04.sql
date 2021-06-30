@@ -57,8 +57,8 @@ select  em.employee_id,
         em.department_id
 from 	employees em, (select department_id, max(salary) mx
                     	from employees
-                    	group by department_id)
-where 	em.department_id = dm.department_id
+                    	group by department_id) dp
+where 	em.department_id = dp.department_id
 and 	em.salary = mx
 order by em.salary desc;
 

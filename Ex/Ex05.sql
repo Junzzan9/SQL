@@ -149,7 +149,7 @@ from    employees em
 where   salary> = all(select salary
                      from employees
                      where department_id=110)
-        and  em.department_id<>110;
+        and  em.department_id<>110;	
         
 --예제
 --각 부서별로 최고급여를 받는 사원을 출력하세요
